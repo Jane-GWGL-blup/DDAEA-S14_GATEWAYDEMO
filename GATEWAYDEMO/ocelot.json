@@ -1,0 +1,34 @@
+
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/Customers",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7102
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/api/Customers",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Student",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7266
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/api/Student",
+            "UpstreamHttpMethod": [ "GET" ]
+        }
+
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:5000"
+    }
+
+}
